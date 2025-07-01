@@ -1,7 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
   // زر العودة للأعلى
   const backToTopBtn = document.getElementById('backToTopBtn');
-
   if (backToTopBtn) {
     window.addEventListener('scroll', function () {
       if (window.scrollY > 300) {
@@ -16,20 +15,22 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // زر تغيير اللغة
-  const langBtn = document.getElementById('toggleLangBtn');
+  // زر تغيير الوضع الليلي
   const themeBtn = document.getElementById("toggleThemeBtn");
-
   if (themeBtn) {
     themeBtn.addEventListener("click", function () {
       document.body.classList.toggle("dark-theme");
     });
   }
 
+  // زر تغيير اللغة
+  const langBtn = document.getElementById("toggleLangBtn");
+  if (!langBtn) return;
+
   const translations = {
     ar: {
       title: 'مرحبًا',
-      welcome: 'مرحبا بكم مرحبًا بك في معرض أعمالي الشخصي. أنا مطوّر ويب شغوف بإنشاء مواقع حديثة ومتجاوبةا',
+      welcome: 'مرحبًا بك في معرض أعمالي الشخصي. أنا مطوّر ويب شغوف بإنشاء مواقع حديثة ومتجاوبة.',
       theme: '<i class="fas fa-moon"></i> تبديل الوضع الليلي',
       lang: '<i class="fas fa-language"></i> English',
       projects: 'مشاريعي',
@@ -40,17 +41,17 @@ window.addEventListener('DOMContentLoaded', function () {
       quote: '"التعلم المستمر هو سر النجاح في عالم التقنية."',
       quoteAuthor: '- ستيف جوبز',
       skills: 'المهارات',
-      skill1: 'صناعة المحتوى ',
+      skill1: 'صناعة المحتوى',
       skill2: 'تحليل البيانات',
       achievements: 'الإنجازات',
-      achievement1: 'برمجة <span dir="ltr">AVR</span> مباشرة عبر الريجسترات',
-      achievement2: ' طوّرت واجهة مستخدم في برنامج MATLAB لحساب المعدل التراكمي',
-      achievement3: ' Excel تلقائيًا إلى  GPA إصدار نتائج ',
-      achievement4: ' KiCad و Proteus باستخدام PCB تصميم',
+      achievement1: 'برمجة AVR مباشرة عبر الريجسترات',
+      achievement2: 'طوّرت واجهة MATLAB لحساب المعدل التراكمي',
+      achievement3: 'تصدير النتائج إلى Excel تلقائيًا',
+      achievement4: 'تصميم PCB باستخدام KiCad و Proteus',
       achievement5: 'تطوير تطبيق ويب بسيط',
       achievement6: 'العمل مع أكثر من 10 عملاء',
-      achievement7: 'درّست لغات برمجة لزملائي.',
-      achievement8: 'قدت فريقًا مكوّنًا من خمسة',
+      achievement7: 'درّست لغات برمجة لزملائي',
+      achievement8: 'قيادة فريق تقني من 5 أشخاص',
       contact: 'تواصل معي',
       send: '<i class="fas fa-paper-plane"></i> إرسال',
       download: '<i class="fas fa-download"></i> تحميل السيرة الذاتية',
@@ -67,28 +68,28 @@ window.addEventListener('DOMContentLoaded', function () {
     },
     en: {
       title: 'Welcome to My Portfolio',
-      welcome: 'Welcome I’m a web developer passionate about building modern and responsive websites.',
+      welcome: 'Welcome! I’m a web developer passionate about building modern and responsive websites.',
       theme: '<i class="fas fa-moon"></i> Toggle Dark Mode',
       lang: '<i class="fas fa-language"></i> العربية',
       projects: 'My Projects',
-      project1: "New Projects Coming Soon🚧!",
-      project2: "New Projects Coming Soon🚧!",
-      project3: "New Projects Coming Soon🚧!",
-      profile: 'Frontend developer & designer. Passionate about tech and continuous learning.',
-      quote: '"Continuous learning is the secret to success in the tech world."',
+      project1: "New Projects Coming Soon 🚧!",
+      project2: "New Projects Coming Soon 🚧!",
+      project3: "New Projects Coming Soon 🚧!",
+      profile: 'Frontend developer & designer. Passionate about tech and learning.',
+      quote: '"Continuous learning is the key to success in tech."',
       quoteAuthor: '- Steve Jobs',
       skills: 'Skills',
       skill1: 'Content creation',
       skill2: 'Data & Analytics',
       achievements: 'Achievements',
-      achievement1: 'Implemented direct register-level programming on an AVR microcontroller using bit manipulation.',
-      achievement2: 'Developed MATLAB GUI  to calculate cumulative GPA and export results automatically to an Excel file',
-      achievement3: 'Analyzed data and generated reports, then exported them automatically to Excel',
-      achievement4: 'Designed printed circuit boards (PCB) using specialized tools, including schematic capture, board layout, and pre-production simulation',
-      achievement5: 'Developed a responsive web application with a user-friendly interface.',
-      achievement6: 'Tutored peers in programming languages through well-prepared sessions',
-      achievement7: 'Worked with over ten clients on various technical projects',
-      achievement8: 'Led a five-person in a technical projec',
+      achievement1: 'AVR low-level register programming',
+      achievement2: 'MATLAB GUI for GPA + Excel export',
+      achievement3: 'Automated report export to Excel',
+      achievement4: 'PCB design using KiCad & Proteus',
+      achievement5: 'Responsive web app',
+      achievement6: 'Worked with over 10 clients',
+      achievement7: 'Tutored peers in programming',
+      achievement8: 'Led a 5-person tech team',
       contact: 'Contact Me',
       send: '<i class="fas fa-paper-plane"></i> Send',
       download: '<i class="fas fa-download"></i> Download CV',
@@ -106,83 +107,73 @@ window.addEventListener('DOMContentLoaded', function () {
   };
 
   let currentLang = 'ar';
-  if (langBtn) {
-    langBtn.addEventListener('click', function () {
-      currentLang = currentLang === 'ar' ? 'en' : 'ar';
-      document.documentElement.lang = currentLang;
-      document.body.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-      document.title = translations[currentLang].title;
-      document.querySelector('.header h1').textContent = translations[currentLang].title;
-      document.querySelector('.header p').textContent = translations[currentLang].welcome;
-      document.getElementById('toggleThemeBtn').innerHTML = translations[currentLang].theme;
-      langBtn.innerHTML = translations[currentLang].lang;
+  langBtn.addEventListener('click', function () {
+    currentLang = currentLang === 'ar' ? 'en' : 'ar';
+    const t = translations[currentLang];
 
-      document.querySelector('.quote-text').textContent = translations[currentLang].quote;
-      document.querySelector('.quote-author').textContent = translations[currentLang].quoteAuthor;
-      document.querySelector('.skills h3').textContent = translations[currentLang].skills;
+    document.documentElement.lang = currentLang;
+    document.body.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
 
-      const skillsList = document.querySelectorAll('.skills-list li');
-      skillsList[2].innerHTML = '<i class="fas fa-pencil-alt"></i> ' + translations[currentLang].skill1;
-      skillsList[3].innerHTML = '<i class="fas fa-chart-line"></i> ' + translations[currentLang].skill2;
+    document.title = t.title;
+    document.querySelector('.header h1').textContent = t.title;
+    document.querySelector('.header p').textContent = t.welcome;
+    if (themeBtn) themeBtn.innerHTML = t.theme;
+    langBtn.innerHTML = t.lang;
+    document.querySelector('.projects-title').textContent = t.projects;
 
-      document.querySelector('.profile-desc').textContent = translations[currentLang].profile;
-      document.querySelector('.achievements h3').textContent = translations[currentLang].achievements;
-      document.querySelector('.contact-box h3').textContent = translations[currentLang].contact;
-      document.querySelector('.contact-form button').innerHTML = translations[currentLang].send;
-      document.querySelector('.cv-btn').innerHTML = translations[currentLang].download;
-      document.querySelector('.projects-title').textContent = translations[currentLang].projects;
+    const projects = document.querySelectorAll('.list li');
+    projects[0].innerHTML = t.project1;
+    projects[1].innerHTML = t.project2;
+    projects[2].innerHTML = t.project3;
 
-      const hobbiesList = document.querySelectorAll('.hobbies-list li');
-      hobbiesList[0].innerHTML = '<i class="fas fa-camera-retro"></i> ' + translations[currentLang].hobby1;
-      hobbiesList[1].innerHTML = '<i class="fas fa-music"></i> ' + translations[currentLang].hobby2;
-      hobbiesList[2].innerHTML = '<i class="fas fa-bicycle"></i> ' + translations[currentLang].hobby3;
-      hobbiesList[3].innerHTML = '<i class="fas fa-book-reader"></i> ' + translations[currentLang].hobby4;
+    document.querySelector('.profile-desc').textContent = t.profile;
+    document.querySelector('.quote-text').textContent = t.quote;
+    document.querySelector('.quote-author').textContent = t.quoteAuthor;
 
-      const langs = document.querySelectorAll('.languages-list li');
-      langs[0].innerHTML = '<i class="fas fa-globe"></i> ' + translations[currentLang].arabic;
-      langs[1].innerHTML = '<i class="fas fa-globe"></i> ' + translations[currentLang].english;
-      langs[2].innerHTML = '<i class="fas fa-globe"></i> ' + translations[currentLang].french;
-      document.querySelector('.main-footer p').innerHTML = translations[currentLang].footer;
+    document.querySelector('.skills h3').textContent = t.skills;
+    const skillsList = document.querySelectorAll('.skills-list li');
+    if (skillsList.length >= 4) {
+      skillsList[2].innerHTML = '<i class="fas fa-pencil-alt"></i> ' + t.skill1;
+      skillsList[3].innerHTML = '<i class="fas fa-chart-line"></i> ' + t.skill2;
+    }
 
-      const achievementsList = document.querySelectorAll('.achievements-list li');
-      achievementsList[0].innerHTML = '<i class="fas fa-microchip"></i> ' + translations[currentLang].achievement1;
-      achievementsList[1].innerHTML = '<i class="fas fa-calculator"></i> ' + translations[currentLang].achievement2;
-      achievementsList[2].innerHTML = '<i class="fas fa-file-excel"></i> ' + translations[currentLang].achievement3;
-      achievementsList[3].innerHTML = '<i class="fas fa-project-diagram"></i> ' + translations[currentLang].achievement4;
-      achievementsList[4].innerHTML = '<i class="fas fa-globe"></i> ' + translations[currentLang].achievement5;
-      achievementsList[5].innerHTML = '<i class="fas fa-code"></i> ' + translations[currentLang].achievement6;
-      achievementsList[6].innerHTML = '<i class="fas fa-shopping-cart"></i> ' + translations[currentLang].achievement7;
-      achievementsList[7].innerHTML = '<i class="fas fa-users"></i> ' + translations[currentLang].achievement8;
+    document.querySelector('.achievements h3').textContent = t.achievements;
+    const achievementsList = document.querySelectorAll('.achievements-list li');
+    for (let i = 0; i < achievementsList.length; i++) {
+      achievementsList[i].innerHTML = `<i class="fas fa-check-circle"></i> ${t['achievement' + (i + 1)]}`;
+    }
 
-      const progjectslist = document.querySelectorAll(".list li");
-      progjectslist[0].innerHTML = translations[currentLang].project1;
-      progjectslist[1].innerHTML = translations[currentLang].project2;
-      progjectslist[2].innerHTML = translations[currentLang].project3;
+    document.querySelector('.contact-box h3').textContent = t.contact;
+    document.querySelector('.contact-form button').innerHTML = t.send;
+    document.querySelector('.cv-btn').innerHTML = t.download;
 
-      const contactInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
-      if (currentLang === 'ar') {
-        contactInputs[0].placeholder = 'اسمك';
-        contactInputs[1].placeholder = 'بريدك الإلكتروني';
-        contactInputs[2].placeholder = 'رسالتك';
-      } else {
-        contactInputs[0].placeholder = 'Your Name';
-        contactInputs[1].placeholder = 'Your Email';
-        contactInputs[2].placeholder = 'Your Message';
-      }
+    document.querySelector('.hobbies h3').textContent = t.hobbies;
+    const hobbies = document.querySelectorAll('.hobbies-list li');
+    hobbies[0].innerHTML = `<i class="fas fa-camera-retro"></i> ${t.hobby1}`;
+    hobbies[1].innerHTML = `<i class="fas fa-music"></i> ${t.hobby2}`;
+    hobbies[2].innerHTML = `<i class="fas fa-bicycle"></i> ${t.hobby3}`;
+    hobbies[3].innerHTML = `<i class="fas fa-book-reader"></i> ${t.hobby4}`;
 
-      const welcomeModal = document.querySelector('.welcome-modal-content');
-      if (welcomeModal) {
-        if (currentLang === 'ar') {
-          welcomeModal.querySelector('h2').textContent = 'مرحباً بك!';
-          welcomeModal.querySelector('p').innerHTML = 'سعيدون بزيارتك لموقعي الشخصي.<br>نتمنى لك تصفحاً ممتعاً ومفيداً.';
-          welcomeModal.querySelector('button').textContent = 'شكراً';
-        } else {
-          welcomeModal.querySelector('h2').textContent = 'Welcome!';
-          welcomeModal.querySelector('p').innerHTML = 'We are happy to have you on my personal site.<br>Wishing you a pleasant and useful browsing.';
-          welcomeModal.querySelector('button').textContent = 'Thanks';
-        }
-      }
-    });
-  }
+    document.querySelector('.languages h3').textContent = t.languages;
+    const langs = document.querySelectorAll('.languages-list li');
+    langs[0].innerHTML = `<i class="fas fa-globe"></i> ${t.arabic}`;
+    langs[1].innerHTML = `<i class="fas fa-globe"></i> ${t.english}`;
+    langs[2].innerHTML = `<i class="fas fa-globe"></i> ${t.french}`;
+
+    document.querySelector('.main-footer p').innerHTML = t.footer;
+
+    // تغيير مكان التفاعل مع نموذج التواصل
+    const contactInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
+    if (currentLang === 'ar') {
+      contactInputs[0].placeholder = 'اسمك';
+      contactInputs[1].placeholder = 'بريدك الإلكتروني';
+      contactInputs[2].placeholder = 'رسالتك';
+    } else {
+      contactInputs[0].placeholder = 'Your Name';
+      contactInputs[1].placeholder = 'Your Email';
+      contactInputs[2].placeholder = 'Your Message';
+    }
+  });
 });
+
 
