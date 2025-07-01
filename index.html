@@ -1,147 +1,52 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <!-- إضافة مكتبة Font Awesome للأيقونات -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/emailpopup.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <title>Welcome to My Portfolio</title>
-    <script>
-    emailjs.init("uGvWXl9b9DKBDUNmx"); 
-    </script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-        <script type="text/javascript">
-        (function(){
-        emailjs.init({
-        publicKey: "uGvWXl9b9DKBDUNmx",
-        });
-    })();
-</script>
-  <script src="/java/sendemail.js"></script>
+  <meta charset="UTF-8">
+  <title>Welcome to My Portfolio</title>
 
+  <!-- أيقونات Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ملفات CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/emailpopup.css">
+
+  <!-- مكتبة EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init("uGvWXl9b9DKBDUNmx");
+  </script>
 </head>
 <body>
-    <div class="progress-bar">
-        <div class="progress-bar-inner" id="progressBarInner"></div>
-    </div>
-    <div class="container">
-        <div class="header">
-            <h1>مرحبًا</h1>
-            <p>مرحبًا بك في معرض أعمالي الشخصي. أنا مطوّر ويب شغوف بإنشاء مواقع حديثة ومتجاوبة.</p>
-        </div>
-        <div class="theme-toggle"> <!--  زر تبديل الوضع الليلي واللغة  -->
-            <button id="toggleThemeBtn"><i class="fas fa-moon"></i> تبديل الوضع الليلي</button>
-            <button id="toggleLangBtn"><i class="fas fa-language"></i> English</button>
-        </div>
-        <div class="list-header">
-            <h3 class="projects-title">مَشارعي</h3>
-        </div>
-        <div class="list">
-            <ol>
-                <li class="project-item"><a href="#" target="_blank"> 🚧! مشاريع جديدة قيد الإطلاق</a></li>
-                <li class="project-item"><a href="#" target="_blank"> 🚧! مشاريع جديدة قيد الإطلاق</a></li>
-                <li class="project-item"><a href="#" target="_blank">🚧! مشاريع جديدة قيد الإطلاق</a></li>
-            </ol>
-        </div>
-        <div class="profile-card">
-            <img src="image/497362896_2646440459054734_4821894549905261208_n.jpg" alt="صورة شخصية" class="profile-img">
-            <h2>Mellal Rida</h2>
-            <p class="profile-desc">مبرمج ومصمم واجهات أمامية. شغوف بالتقنية والتعلم المستمر.</p>
-            <div class="profile-social">
-                <a href="https://github.com/MLRiida09" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/mellal-rida-203989371" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-        <div class="quote-box">
-            <i class="fas fa-quote-right"></i>
-            <p class="quote-text">"التعلم المستمر هو سر النجاح في عالم التقنية."</p>
-            <span class="quote-author">- ستيف جوبز</span>
-        </div>
-        <div class="skills">
-            <h3>المهارات</h3>
-            <ul class="skills-list">
-                <li><i class="fas fa-code"></i> HTML &amp; CSS</li>
-                <li><i class="fas fa-laptop-code"></i> JavaScript</li>
-                <li><i class="fas fa-file-alt"></i> صناعة المحتوى</li>
-                <li><i class="fas fa-chart-line"></i> تحليل البيانات</li>
-            </ul>
-        </div>
-        <div class="achievements">
-            <h3>الإنجازات</h3>
-            <ul class="achievements-list">
-                <li><i class="fas fa-microchip"></i>نفّذت برمجة مباشرة على متحكم AVR </li>
-                <li><i class="fas fa-calculator"></i> طوّرت واجهة مستخدم في برنامج MATLAB لحساب المعدل التراكمي وتصدير النتائج تلقائيًا إلى ملف Excel.</li>
-                <li><i class="fas fa-file-excel"></i>  حلّلت بيانات وأنشأت تقارير، ثم صدّرتها تلقائيًا إلى ملف Excel باستخدام وظائف تصدير البيانات.</li>                
-                <li><i class="fas fa-project-diagram"></i>صمّمت لوحات إلكترونية (PCB) باستخدام برامج متخصصة، شملت رسم المخططات، تخطيط اللوحة والمحاكاة قبل التصنيع.</li>
-                <li><i class="fas fa-globe"></i> طوّرت تطبيق ويب متكامل يعمل على مختلف الأجهزة، ويعتمد على واجهة مستخدم متجاوبة وسهلة الاستخدام.</li>
-                <li><i class="fas fa-code"></i>  درّست لغات البرمجة لزملائي عبر جلسات حضورية وعن بُعد، بتحضيرات منظمة ونتائج ملحوظة.</li>
-                <li><i class="fas fa-shopping-cart"></i> العمل مع أكثر من 10 عملاء</li>
-                <li><i class="fas fa-users"></i>قدت فريقًا مكوّنًا من خمسة أشخاص في مشروع تقني.</li>
-            </ul>
-        </div>
-        <div class="contact-box">
-            <h3>تواصل معي</h3>
-            <form class="contact-form" id="contact-form">
-                <input type="text" id="name" placeholder="اسمك" name="name"  required>
-                <input type="email" id="email" placeholder="بريدك الإلكتروني" name="email" required>
-                <textarea  id="message" placeholder="رسالتك"  name="message" rows="4" required  ></textarea>
-                <button type="submit"  ; return false;"><i class="fas fa-paper-plane"></i> إرسال</button>
-            </form>
-        </div>
-        <div class="cv-download">
-            <a href="cv.pdf" download class="cv-btn"><i class="fas fa-download"></i> تحميل السيرة الذاتية</a>
-        </div>
-        <div class="hobbies">
-            <h3>الهوايات</h3>
-            <ul class="hobbies-list">
-                <li><i class="fas fa-camera-retro"></i> التصوير</li>
-                <li><i class="fas fa-music"></i> الاستماع للموسيقى</li>
-                <li><i class="fas fa-bicycle"></i> ركوب الدراجات</li>
-                <li><i class="fas fa-book-reader"></i> قراءة الكتب</li>
-            </ul>
-        </div>
-        <div class="languages">
-            <h3>اللغات التي أتحدثها</h3>
-            <ul class="languages-list">
-                <li><i class="fas fa-globe"></i> العربية <span class="lang-level">(اللغة الأم)</span></li>
-                <li><i class="fas fa-globe"></i> الإنجليزية <span class="lang-level">(جيد جداً)</span></li>
-                <li><i class="fas fa-globe"></i> الفرنسية <span class="lang-level">(مبتدئ)</span></li>
-            </ul>
-        </div>
-        <footer class="main-footer">
-            <p>جميع الحقوق محفوظة &copy; 2025 - تصميم <span class="footer-author">ملال رضا  </span></p>
-            <div class="footer-social">
-                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.facebook.com/riida.riida.468490" target="_blank"><i class="fab fa-facebook"></i></a>
-            </div>
-        </footer>
-    </div>
-    <!-- زر العودة للأعلى (Back to Top) -->
-    <button class="back-to-top" id="backToTopBtn" title="العودة للأعلى">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    <!-- email popup -->
-    <div id="email-success" class="email-popup success-popup">
-        <p>تم إرسال الرسالة بنجاح</p>
-    </div>
-        <div id="email-failure" class="email-popup error-popup">
-            <p> ❌ فشل الإرسال، حاول مرة أخرى.</p>
-        </div>
+  <!-- ... محتوى الموقع ... -->
 
-   <!-- js back to top-->
->    <script src="/java/theme.js"></script>
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", sendEmail);
-        </script>
-     <script src="java/theme.js"></script>
+  <!-- صورة ملفك الشخصي (تأكد أنها داخل مجلد images) -->
+  <img src="image/497362896_2646440459054734_4821894549905261208_n.jpg" alt="صورة شخصية" class="profile-img">
+
+  <!-- نموذج التواصل -->
+  <form id="contact-form">
+    <input type="text" id="name" name="name" placeholder="اسمك" required>
+    <input type="email" id="email" name="email" placeholder="بريدك الإلكتروني" required>
+    <textarea id="message" name="message" placeholder="رسالتك" rows="4" required></textarea>
+    <button type="submit"><i class="fas fa-paper-plane"></i> إرسال</button>
+  </form>
+
+  <!-- النوافذ المنبثقة -->
+  <div id="email-success" class="email-popup success-popup">
+    <p>✅ تم إرسال الرسالة بنجاح</p>
+  </div>
+  <div id="email-failure" class="email-popup error-popup">
+    <p>❌ فشل الإرسال، حاول مرة أخرى.</p>
+  </div>
+
+  <!-- ملفات JavaScript -->
+  <script src="java/theme.js"></script>
   <script src="java/sendemail.js"></script>
-    <script>
+
+  <!-- ربط الفورم بالدالة -->
+  <script>
     document.getElementById("contact-form").addEventListener("submit", sendEmail);
   </script>
 </body>
 </html>
+
