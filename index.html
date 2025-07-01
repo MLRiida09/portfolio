@@ -4,26 +4,24 @@
   <meta charset="UTF-8">
   <title>Welcome to My Portfolio</title>
 
-  <!-- أيقونات Font Awesome -->
+  <!--  Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- ملفات CSS -->
+  <!--  CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/emailpopup.css">
 
-  <!-- مكتبة EmailJS -->
+  <!--  EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     emailjs.init("uGvWXl9b9DKBDUNmx");
   </script>
 </head>
 <body>
-  <!-- ... محتوى الموقع ... -->
-
-  <!-- صورة ملفك الشخصي (تأكد أنها داخل مجلد images) -->
+  <!--  images -->
   <img src="image/497362896_2646440459054734_4821894549905261208_n.jpg" alt="صورة شخصية" class="profile-img">
 
-  <!-- نموذج التواصل -->
+  <!-- form -->
   <form id="contact-form">
     <input type="text" id="name" name="name" placeholder="اسمك" required>
     <input type="email" id="email" name="email" placeholder="بريدك الإلكتروني" required>
@@ -31,7 +29,7 @@
     <button type="submit"><i class="fas fa-paper-plane"></i> إرسال</button>
   </form>
 
-  <!-- النوافذ المنبثقة -->
+  <!-- windows -->
   <div id="email-success" class="email-popup success-popup">
     <p>✅ تم إرسال الرسالة بنجاح</p>
   </div>
@@ -39,11 +37,11 @@
     <p>❌ فشل الإرسال، حاول مرة أخرى.</p>
   </div>
 
-  <!-- ملفات JavaScript -->
+  <!--  JavaScript -->
   <script src="java/theme.js"></script>
   <script src="java/sendemail.js"></script>
 
-  <!-- ربط الفورم بالدالة -->
+  <!-fonctios form -->
   <script>
     document.getElementById("contact-form").addEventListener("submit", sendEmail);
   </script>
