@@ -1,12 +1,12 @@
 /* تنسيق الخط والخلفية للصفحة بالكامل */
 body {
-    font-family: 'Cairo', Arial, sans-serif; /* نوع الخط */
+    font-family: 'Cairo', Arial, sans-serif; 
     background: #020024;
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);    background-size: cover; /* تغطية الخلفية بالكامل */
-    background-position: center; /* توسيط الخلفية */
-    background-repeat: no-repeat; /* عدم تكرار الخلفية */
-    margin: 0; /* إزالة الهوامش الافتراضية */
-    padding: 0; /* إزالة الحشوة الافتراضية */
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0; 
+    padding: 0; 
 }
 ul, ol, .skills-list,.achievements-list,.languages-list {
     list-style: none;
@@ -78,7 +78,7 @@ body[dir="ltr"] {
     direction: ltr;
     text-align: left;
 }
-/* شريط تقدم (Progress Bar) أعلى الصفحة */
+/*(Progress Bar)  */
 .progress-bar {
     width: 100%;
     height: 6px;
@@ -109,48 +109,48 @@ body.dark-mode .progress-bar-inner {
     display: inline-block;
 }
 
-/* حاوية المحتوى الرئيسية */
+/* main */
 .container {
-    max-width: 400px; /* أقصى عرض للحاوية */
-    margin: 40px auto; /* توسيط الحاوية عموديًا وأفقيًا */
-    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); /* صورة خلفية للحاوية */
-    background-size: cover; /* تغطية الخلفية بالكامل */
-    background-position: center; /* توسيط الخلفية */
-    background-repeat: no-repeat; /* عدم تكرار الخلفية */
-    border-radius: 16px; /* زوايا دائرية */
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08); /* ظل خفيف للحاوية */
-    padding: 24px 20px; /* حشوة داخلية */
-    animation: fadeIn 1s ease; /* أنيميشن عند الظهور */
+    max-width: 400px; 
+    margin: 40px auto; 
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border-radius: 16px; 
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08); 
+    padding: 24px 20px; 
+    animation: fadeIn 1s ease; 
 }
 
-/* أنيميشن ظهور الحاوية */
+/*container animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(40px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* رأس الصفحة (العنوان والوصف) */
+/* head */
 .header {
-    text-align: center; /* توسيط النص */
-    margin-bottom: 24px; /* مسافة أسفل الرأس */
-    animation: slideDown 1s 0.2s both; /* أنيميشن نزول الرأس */
+    text-align: center; 
+    margin-bottom: 24px; 
+    animation: slideDown 1s 0.2s both; 
 }
 
-/* أنيميشن نزول الرأس */
+/* Head Down Animation */
 @keyframes slideDown {
     from { opacity: 0; transform: translateY(-30px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 .header h1 {
-    margin: 0 0 8px 0; /* مسافة أسفل العنوان */
-    color: #2d3436; /* لون العنوان */
-    font-size: 2rem; /* حجم العنوان */
+    margin: 0 0 8px 0; 
+    color: #2d3436; 
+    font-size: 2rem; 
 }
 
 .header p {
-    color: #636e72; /* لون النص */
-    margin: 0; /* إزالة الهوامش */
+    color: #636e72; 
+    margin: 0; 
 }
 
 /* تنسيق قائمة الروابط */
@@ -160,16 +160,16 @@ body.dark-mode .progress-bar-inner {
     margin: 0;
 }
 
-/* كل عنصر في القائمة */
+/*li list */
 
 
-/* تأخير الأنيميشن لكل عنصر */
+/* animation delay for every li */
 .list li:nth-child(1) { animation-delay: 0.3s; }
 .list li:nth-child(2) { animation-delay: 0.5s; }
 .list li:nth-child(3) { animation-delay: 0.7s; }
 .list li:nth-child(4) { animation-delay: 0.9s; }
 
-/* أنيميشن دخول عناصر القائمة */
+/*entry animation for list */
 @keyframes listItemIn {
     to {
         transform: translateX(0);
@@ -177,26 +177,26 @@ body.dark-mode .progress-bar-inner {
     }
 }
 
-/* تنسيق الرابط داخل القائمة 
+/* link inside list
 .list a {
     
 }
 */
-/* تأثير عند المرور على الرابط */
+/* Effect when hovering over the link*/
 .list a:hover {
-    background: linear-gradient(90deg, #0984e3 0%, #00b894 100%); /* تدرج لوني */
-    color: #fff; /* لون النص أبيض */
-    transform: scale(1.04) translateX(8px); /* تكبير وتحريك بسيط */
-    box-shadow: 0 4px 16px rgba(9,132,227,0.13); /* ظل أقوى */
+    background: linear-gradient(90deg, #0984e3 0%, #00b894 100%); 
+    color: #fff;
+    transform: scale(1.04) translateX(8px); 
+    box-shadow: 0 4px 16px rgba(9,132,227,0.13); 
 }
 
-/* إضافة ظل داخلي خفيف للحاوية عند المرور */
+/*  shadow to the container when passing*/
 .container:hover {
     box-shadow: 0 8px 32px rgba(9,132,227,0.18), 0 0 0 4px #00b89433;
     transition: box-shadow 0.3s;
 }
 
-/* إضافة حركة اهتزاز خفيفة للأزرار عند الضغط */
+/*   vibrating the buttons when click*/
 .list a:active {
     animation: shake 0.2s;
 }
@@ -209,7 +209,7 @@ body.dark-mode .progress-bar-inner {
     100% { transform: translateX(0); }
 }
 
-/* إضافة شريط جانبي ملون صغير للعناصر عند المرور */
+/*  small coloured sidebar for items when passing */
 .list a::before {
     content: '';
     display: block;
@@ -227,13 +227,13 @@ body.dark-mode .progress-bar-inner {
     width: 8px;
 }
 
-/* جعل نص الرابط فوق الشريط الجانبي */
+/*link text above the sidebar*/
 .list a {
     position: relative;
     z-index: 1;
 }
 
-/* تنسيق الأيقونة بجانب النص */
+/* Formatting the icon next to the text */
 .list i {
     margin-left: 12px; /* مسافة بين الأيقونة والنص */
     font-size: 1.3em; /* حجم الأيقونة */
@@ -241,13 +241,13 @@ body.dark-mode .progress-bar-inner {
     transition: color 0.3s, transform 0.3s; /* انتقالات سلسة */
 }
 
-/* تأثير على الأيقونة عند المرور على الرابط */
+/* effect on the icon when hovering over the link*/
 .list a:hover i {
     color: #fff; /* لون الأيقونة أبيض */
     transform: rotate(-12deg) scale(1.2); /* دوران وتكبير للأيقونة */
 }
 
-/* بطاقة البروفايل الشخصية */
+/* Profile Card */
 .profile-card {
     background: rgba(255,255,255,0.95);
     border-radius: 14px;
@@ -302,7 +302,7 @@ body.dark-mode .progress-bar-inner {
     transform: scale(1.2) rotate(-8deg);
 }
 
-/* صندوق الاقتباس التحفيزي */
+/*  Quote Box */
 .quote-box {
     background: rgba(9,132,227,0.08);
     border-radius: 12px;
@@ -334,7 +334,7 @@ body.dark-mode .progress-bar-inner {
     font-weight: bold;
 }
 
-/* قسم المهارات */
+/* skills */
 .skills {
     background: rgba(255,255,255,0.93);
     border-radius: 12px;
@@ -375,7 +375,7 @@ body.dark-mode .progress-bar-inner {
     color: #fff;
 }
 
-/* قسم الإنجازات */
+/* achievments */
 .achievements {
     background: rgba(255,255,255,0.93);
     border-radius: 12px;
@@ -425,7 +425,7 @@ body.dark-mode .progress-bar-inner {
     color: #fff;
 }
 
-/* صندوق التواصل */
+/* contact */
 .contact-box {
     background: rgba(255,255,255,0.93);
     border-radius: 12px;
@@ -485,7 +485,7 @@ body.dark-mode .progress-bar-inner {
     transform: scale(1.06) translateY(-2px);
 }
 
-/* زر تحميل السيرة الذاتية */
+/* cv */
 .cv-download {
     text-align: center;
     margin: 24px 0 0 0;
@@ -515,7 +515,7 @@ body.dark-mode .progress-bar-inner {
     font-size: 1.2em;
 }
 
-/* تذييل الموقع */
+/* footer */
 .main-footer {
     background: rgba(9,132,227,0.10);
     margin-top: 36px;
@@ -550,7 +550,7 @@ body.dark-mode .progress-bar-inner {
     transform: scale(1.15) rotate(-8deg);
 }
 
-/* زر تبديل الوضع الليلي */
+/*  btn dark mode */
 .theme-toggle {
     display: flex;
     gap: 10px;
@@ -578,7 +578,7 @@ body.dark-mode .progress-bar-inner {
     transform: scale(1.05);
 }
 
-/* الوضع الليلي */
+/* dark-mode */
 body.dark-mode {
     background: #23272f !important;
     color: #f1f2f6;
@@ -613,7 +613,7 @@ body.dark-mode .skills-list li:hover {
     color: #fff !important;
 }
 
-/* نافذة ترحيب عصرية */
+/* welcome window */
 .welcome-modal {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -666,7 +666,7 @@ body.dark-mode .welcome-modal-content {
     color: #f1f2f6;
 }
 
-/* قسم الهوايات */
+/* hobbies */
 .hobbies {
     background: rgba(255,255,255,0.93);
     border-radius: 12px;
@@ -711,7 +711,7 @@ body.dark-mode .welcome-modal-content {
     color: #fff;
 }
 
-/* قسم اللغات */
+/* languages */
 .languages {
     background: rgba(255,255,255,0.93);
     border-radius: 12px;
@@ -756,7 +756,7 @@ body.dark-mode .welcome-modal-content {
     margin-right: 6px;
 }
 
-/* زر العودة للأعلى (Back to Top Button) */
+/* Back to Top Button */
 .back-to-top {
     position: fixed;
     bottom: 32px;
@@ -811,4 +811,69 @@ body.dark-mode .header p {
     color: #f1f2f6 !important;
 }
 
+/* phone mode*/
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px 12px;
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .profile-card,
+  .skills,
+  .achievements,
+  .contact-box,
+  .quote-box,
+  .cv-download,
+  .hobbies,
+  .languages,
+  .main-footer {
+    margin: 16px 0;
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    max-width: none;
+  }
+
+  .cv-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .theme-toggle {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .profile-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hobbies-list,
+  .skills-list,
+  .languages-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-item {
+    font-size: 0.95em;
+  }
+
+  .header h1 {
+    font-size: 1.5em;
+  }
+
+  .header p {
+    font-size: 1em;
+  }
+}
 
