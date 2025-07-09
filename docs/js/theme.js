@@ -98,7 +98,7 @@ const translations = {
         welcome: 'Welcome I’m a web developer passionate about building modern and responsive websites.',
         theme: '<i class="fas fa-moon"></i> Toggle Dark Mode',
         lang: '<i class="fas fa-language"></i> العربية',
-        projects: 'My Projects'
+        projects: 'My Projects' ,
         profile: 'Frontend developer & designer. Passionate about tech and continuous learning.',
         quote: '"Continuous learning is the secret to success in the tech world."',
         quoteAuthor: '- Steve Jobs',
