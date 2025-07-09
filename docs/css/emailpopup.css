@@ -1,0 +1,27 @@
+.email-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  z-index: 9999;
+  display: none;
+  animation: fadeInOut 3s ease forwards;
+}
+
+.success-popup {
+  background-color: #28a745; /* أخضر */
+}
+
+.error-popup {
+  background-color: #dc3545; /* أحمر */
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}

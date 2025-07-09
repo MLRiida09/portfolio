@@ -1,0 +1,101 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    font-family: sans-serif;
+    background-color: #eee; 
+    
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    color: rgba(0, 30, 255, 0.708) ;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+    width: 40%;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 3px;
+}
+
+
+
+#result{
+    font-family: "handwriting";
+    background-color: bisque;
+    font-size: 20px;
+    line-height: 28px;
+    border: 1px solid #333;
+    padding: 0px;
+    height: 300px;
+    width: 90%;
+    margin-bottom: 30px;
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;;
+    border-radius: 3px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+button{
+    background-color:rgba(0, 30, 255, 0.708) ;
+    color:white ; 
+    border: 0 ; 
+    border-radius:6px;
+    cursor: pointer; ;
+    font-family: inherit ; 
+    padding: 8px 10px ;
+    margin: 10px ;
+    font-size: 14px ; 
+    
+}
+
+button:active{
+    transform: scale(0.95) ;
+    background-color: rgb(255, 5, 5);
+    box-shadow: 0px 0px 10px rgba(0, 30, 255, 0.708) ;
+}
+button:focus{
+    outline: 0;
+}
+
+
+
+
+@keyframes pulse {
+    
+    from{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(1.1);
+
+    }
+
+}
