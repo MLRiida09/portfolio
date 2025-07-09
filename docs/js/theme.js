@@ -127,7 +127,6 @@ const translations = {
         english: 'English <span class="lang-level">(Very Good)</span>',
         french: 'French <span class="lang-level">(Beginner)</span>',
         footer: 'All rights reserved &copy; 2025 - Designed by <span class="footer-author">Mellal Rida</span>' ;
-    }
 };
 let currentLang = 'ar';
 langBtn.addEventListener('click', function() {
