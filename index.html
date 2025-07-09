@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- إ Font Awesome icon -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/emailpopup.css">
+    <!--CSS FILES -->
+    <!--main FILES -->
+    <link rel="stylesheet" href="docs/css/mainstyle.css">
+    <link rel="stylesheet" href="docs/css/emailpopup.css">
+    <!--------------------------------------------------------------- -->
     <title>Welcome to My Portfolio</title>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  emailjs.init("uGvWXl9b9DKBDUNmx"); 
-</script>
+    <script>
+    emailjs.init("uGvWXl9b9DKBDUNmx"); 
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
         <script type="text/javascript">
         (function(){
         emailjs.init({
@@ -19,8 +24,8 @@
         });
     })();
 </script>
-  <script src="java/sendemail.js"></script>
-
+<!--CSS SEND MAIL JS -->
+  <script src="docs/js/sendemail.js"></script>
 </head>
 <body>
     <div class="progress-bar">
@@ -40,13 +45,13 @@
         </div>
         <div class="list">
             <ol>
-                <li class="project-item"><a href="#" target="_blank"> 🚧! مشاريع جديدة قيد الإطلاق</a></li>
-                <li class="project-item"><a href="#" target="_blank"> 🚧! مشاريع جديدة قيد الإطلاق</a></li>
-                <li class="project-item"><a href="#" target="_blank">🚧! مشاريع جديدة قيد الإطلاق</a></li>
+                <li class="project-item"><a href="cardproject.html" target="_blank"> cards   </a></li>
+                <li class="project-item"><a href="progressproject.html" target="_blank"> step-progress</a></li>
+                <li class="project-item"><a href="speech-textproject.html" target="_blank"> speech-text </a></li>
             </ol>
         </div>
         <div class="profile-card">
-            <img src="image/497362896_2646440459054734_4821894549905261208_n.jpg" alt="صورة شخصية" class="profile-img">
+            <img src="image/profilepic.jpg" alt="صورة شخصية" class="profile-img">
             <h2>Mellal Rida</h2>
             <p class="profile-desc">مبرمج ومصمم واجهات أمامية. شغوف بالتقنية والتعلم المستمر.</p>
             <div class="profile-social">
@@ -87,7 +92,7 @@
                 <input type="text" id="name" placeholder="اسمك" name="name"  required>
                 <input type="email" id="email" placeholder="بريدك الإلكتروني" name="email" required>
                 <textarea  id="message" placeholder="رسالتك"  name="message" rows="4" required  ></textarea>
-                <button type="submit"><i class="fas fa-paper-plane"></i> إرسال</button>
+                <button type="submit"  ; return false;"><i class="fas fa-paper-plane"></i> إرسال</button>
             </form>
         </div>
         <div class="cv-download">
@@ -113,13 +118,13 @@
         <footer class="main-footer">
             <p>جميع الحقوق محفوظة &copy; 2025 - تصميم <span class="footer-author">ملال رضا  </span></p>
             <div class="footer-social">
-                <a href="https://github.com/MLRiida09" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/mellal-rida-203989371" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.facebook.com/riida.riida.468490" target="_blank"><i class="fab fa-facebook"></i></a>
             </div>
         </footer>
     </div>
-    <!-- زر العودة للأعلى (Back to Top) -->
+    <!-- (Back to Top) -->
     <button class="back-to-top" id="backToTopBtn" title="العودة للأعلى">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -130,11 +135,10 @@
         <div id="email-failure" class="email-popup error-popup">
             <p> ❌ فشل الإرسال، حاول مرة أخرى.</p>
         </div>
-
    <!-- js back to top-->
->    <script src="java/theme.js"></script>
+>    <script src="docs/js/theme.js"></script>
     <script>
-  document.getElementById("contact-form").addEventListener("submit", sendEmail);
-</script>
+        document.getElementById("contact-form").addEventListener("submit", sendEmail);
+        </script>
 </body>
 </html>
