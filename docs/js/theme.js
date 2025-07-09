@@ -99,7 +99,7 @@ const translations = {
         theme: '<i class="fas fa-moon"></i> Toggle Dark Mode',
         lang: '<i class="fas fa-language"></i> العربية',
         projects: 'My Projects' ,
-        profile:'Frontend developer & designer. Passionate about tech and continuous learning.',
+        profile : 'Frontend developer and designer . Passionate about tech and continuous learning.',
         quote: '"Continuous learning is the secret to success in the tech world."',
         quoteAuthor: '- Steve Jobs',
         skills: 'Skills',
@@ -126,7 +126,7 @@ const translations = {
         arabic: 'Arabic <span class="lang-level">(Native)</span>',
         english: 'English <span class="lang-level">(Very Good)</span>',
         french: 'French <span class="lang-level">(Beginner)</span>',
-        footer: 'All rights reserved &copy; 2025 - Designed by <span class="footer-author">Mellal Rida</span>'
+        footer: 'All rights reserved &copy; 2025 - Designed by <span class="footer-author">Mellal Rida</span>' ;
     }
 };
 let currentLang = 'ar';
