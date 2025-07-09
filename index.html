@@ -4,29 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!--CSS FILES -->
-    <!--main FILES -->
-    <link rel="stylesheet" href="docs/css/mainstyle.css">
-    <link rel="stylesheet" href="docs/css/emailpopup.css">
-    <!--------------------------------------------------------------- -->
-    <title>Welcome to My Portfolio</title>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script>
-    emailjs.init("uGvWXl9b9DKBDUNmx"); 
-    </script>
-    
-        <script type="text/javascript">
-        (function(){
-        emailjs.init({
-        publicKey: "uGvWXl9b9DKBDUNmx",
-        });
-    })();
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="docs/css/mainstyle.css">
+<link rel="stylesheet" href="docs/css/emailpopup.css">
+
+<!-- مكتبة EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- تهيئة EmailJS -->
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    emailjs.init("uGvWXl9b9DKBDUNmx");
+  });
 </script>
-<!--CSS SEND MAIL JS -->
-  <script src="docs/js/sendemail.js"></script>
+
+<!-- سكربت الإرسال -->
+<script src="docs/js/sendemail.js"></script>
 </head>
 <body>
     <div class="progress-bar">
