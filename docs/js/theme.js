@@ -2,7 +2,7 @@
 const toggleBtn = document.getElementById('toggleThemeBtn');
 toggleBtn.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
-    // تغيير الأيقونة
+    // change icone
     const icon = toggleBtn.querySelector('i');
     if(document.body.classList.contains('dark-mode')) {
         icon.classList.remove('fa-moon');
@@ -64,6 +64,9 @@ const translations = {
         theme: '<i class="fas fa-moon"></i> تبديل الوضع الليلي',
         lang: '<i class="fas fa-language"></i> English',
         projects: 'مشاريعي',
+        project1: 'المشروع الأول ' ,
+        project2 :'المشروع الثاني',
+        project3:'المشروع الثالث',
         profile: 'مبرمج ومصمم واجهات أمامية. شغوف بالتقنية والتعلم المستمر.',
         quote: '"التعلم المستمر هو سر النجاح في عالم التقنية."',
         quoteAuthor: '- ستيف جوبز',
@@ -99,6 +102,9 @@ const translations = {
         theme: '<i class="fas fa-moon"></i> Toggle Dark Mode',
         lang: '<i class="fas fa-language"></i> العربية',
         projects: 'My Projects',
+        project1: 'First project' ,
+        project2 :'second project',
+        project3:'third project',
         profile: 'Frontend developer and designer. Passionate about tech and continuous learning.',
         quote: '"Continuous learning is the secret to success in the tech world."',
         quoteAuthor: '- Steve Jobs',
@@ -187,15 +193,15 @@ langBtn.addEventListener('click', function() {
     // Change main menu texts
     const navLinks = document.querySelectorAll('.list li a');
     if(currentLang === 'ar') {
-        navLinks[0].innerHTML = ' الرئيسية';
-        navLinks[1].innerHTML = 'الفيسبوك';
-        navLinks[2].innerHTML = ' تويتر';
-        navLinks[3].innerHTML = ' إنستغرام';
+        navLinks[0].innerHTML = ' المشروع الأول';
+        navLinks[1].innerHTML = 'المشروع الثاني';
+        navLinks[2].innerHTML = ' المشروع الثالث ';
+        navLinks[3].innerHTML = ' المشروع الرابع ';
     } else {
-        navLinks[0].innerHTML = 'Home';
-        navLinks[1].innerHTML = ' Facebook';
-        navLinks[2].innerHTML = ' Twitter';
-        navLinks[3].innerHTML = ' Instagram';
+        navLinks[0].innerHTML = 'First project';
+        navLinks[1].innerHTML = ' second project';
+        navLinks[2].innerHTML = ' third project';
+        navLinks[3].innerHTML = ' fourth project';
     }
     // Change the text of the contact form
     const contactInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
