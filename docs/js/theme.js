@@ -1,4 +1,4 @@
-// كود تبديل الوضع الليلي
+// dark mode
 const toggleBtn = document.getElementById('toggleThemeBtn');
 toggleBtn.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
@@ -15,7 +15,7 @@ toggleBtn.addEventListener('click', function() {
     }
 });
 
-// شريط تقدم الصفحة حسب التمرير
+// progrss bar
 window.addEventListener('scroll', function() {
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -23,7 +23,7 @@ window.addEventListener('scroll', function() {
     document.getElementById('progressBarInner').style.width = progress + '%';
 });
 
-// نافذة ترحيب عصرية تظهر دائماً عند دخول الموقع
+// welcome window
 window.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
         const modal = document.createElement('div');
@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// زر تغيير اللغة (عربي/إنجليزي)
+// translation btn ar/en
 const langBtn = document.getElementById('toggleLangBtn');
 const translations = {
     ar: {
@@ -184,7 +184,7 @@ langBtn.addEventListener('click', function() {
 
 
 
-    // تغيير نصوص القائمة الرئيسية
+    // Change main menu texts
     const navLinks = document.querySelectorAll('.list li a');
     if(currentLang === 'ar') {
         navLinks[0].innerHTML = ' الرئيسية';
@@ -197,7 +197,7 @@ langBtn.addEventListener('click', function() {
         navLinks[2].innerHTML = ' Twitter';
         navLinks[3].innerHTML = ' Instagram';
     }
-    // تغيير نصوص نموذج التواصل
+    // Change the text of the contact form
     const contactInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
     if(currentLang === 'ar') {
         contactInputs[0].placeholder = 'اسمك';
@@ -208,18 +208,7 @@ langBtn.addEventListener('click', function() {
         contactInputs[1].placeholder = 'Your Email';
         contactInputs[2].placeholder = 'Your Message';
     }
-    // تغيير نص نافذة الترحيب إذا كانت موجودة
-    const welcomeModal = document.querySelector('.welcome-modal-content');
-    if (welcomeModal) {
-        if (currentLang === 'ar') {
-            welcomeModal.querySelector('h2').textContent = 'مرحباً بك!';
-            welcomeModal.querySelector('p').innerHTML = 'سعيدون بزيارتك لموقعي الشخصي.<br>نتمنى لك تصفحاً ممتعاً ومفيداً.';
-            welcomeModal.querySelector('button').textContent = 'شكراً';
-        } else {
-            welcomeModal.querySelector('h2').textContent = 'Welcome!';
-            welcomeModal.querySelector('p').innerHTML = 'We are happy to have you on my personal site.<br>Wishing you a pleasant and useful browsing.';
-            welcomeModal.querySelector('button').textContent = 'Thanks';
-        }
-    }
+ 
+    
 
 });
