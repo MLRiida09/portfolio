@@ -1,0 +1,185 @@
+/* Contact Section */
+.contact-section {
+    background: var(--bg-secondary);
+    padding: 5rem 0;
+}
+
+.contact-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.contact-content h2 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.contact-content p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Input and Textarea Styling */
+input[type="text"],
+input[type="email"],
+input[name="name"],
+input[name="email"],
+input[id="name"],
+input[id="email"],
+textarea[name="message"],
+textarea[id="message"],
+.contact-form input,
+.contact-form textarea {
+    width: 100% !important;
+    padding: 1.2rem !important;
+    border: 2px solid var(--border-color) !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease !important;
+    font-family: inherit !important;
+    box-shadow: var(--shadow) !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+}
+
+/* Placeholder Styling */
+input::placeholder,
+textarea::placeholder,
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-secondary) !important;
+    opacity: 0.8 !important;
+}
+
+/* Focus States */
+input:focus,
+textarea:focus,
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 4px rgba(10, 189, 227, 0.15) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Hover States */
+input:hover,
+textarea:hover,
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-color: var(--accent-color) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Textarea Specific */
+textarea {
+    min-height: 140px !important;
+    resize: vertical !important;
+    grid-column: 1 / -1 !important;
+    font-family: inherit !important;
+}
+
+/* Submit Button */
+.submit-btn,
+button[type="submit"],
+input[type="submit"],
+.contact-form button {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+    color: white !important;
+    padding: 1.2rem 2.5rem !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    align-self: center !important;
+    max-width: 220px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    box-shadow: var(--shadow) !important;
+    text-decoration: none !important;
+    margin: 1rem auto !important;
+}
+
+/* Submit Button Hover */
+.submit-btn:hover,
+button[type="submit"]:hover,
+input[type="submit"]:hover,
+.contact-form button:hover {
+    background: var(--secondary-color) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 15px 30px rgba(10, 189, 227, 0.4) !important;
+}
+
+/* Submit Button Active */
+.submit-btn:active,
+button[type="submit"]:active,
+input[type="submit"]:active,
+.contact-form button:active {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 8px 15px rgba(10, 189, 227, 0.3) !important;
+}
+
+/* Full Width Message Field */
+.message-field,
+textarea[name="message"],
+textarea[id="message"] {
+    grid-column: 1 / -1 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 3rem 0;
+    }
+    
+    .contact-content {
+        padding: 0 1rem;
+    }
+    
+    .contact-content h2 {
+        font-size: 2rem;
+    }
+    
+    .form-group {
+        grid-template-columns: 1fr !important;
+    }
+    
+    input,
+    textarea,
+    .contact-form input,
+    .contact-form textarea {
+        padding: 1rem !important;
+    }
+    
+    .submit-btn,
+    button[type="submit"],
+    input[type="submit"] {
+        max-width: 100% !important;
+        padding: 1rem 2rem !important;
+    }
+}

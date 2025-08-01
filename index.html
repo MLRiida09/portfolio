@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mellal Rida | Developer Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Colors.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Navigation.css">
+    <link rel="stylesheet" href="Hero.css">
+    <link rel="stylesheet" href="Cards.css">
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="Concatc.css">
+
+
+</head>
+<body>
+    
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Mellal Rida</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Frontend Developer & Designer</h1>
+            <p>Creating modern, responsive web experiences with clean code and beautiful design</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-code"></i> View My Work
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Interactive Cards</h3>
+                        <p class="project-description">
+                            A dynamic card component with smooth animations and hover effects. 
+                            Built with vanilla JavaScript and modern CSS techniques.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://mlriida09.github.io/-ResponsiveAnimatedCards/" class="project-link link-demo" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/MLRiida09/-ResponsiveAnimatedCards?tab=readme-ov-file" class="project-link link-code">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Progress Steps</h3>
+                        <p class="project-description">
+                            A multi-step progress indicator with animated transitions. 
+                            Perfect for forms, onboarding, and multi-step processes.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://mlriida09.github.io/progress-steps/" class="project-link link-demo" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/MLRiida09/progress-steps?tab=readme-ov-file" class="project-link link-code">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+    <div class="project-image">
+        <i class="fas fa-music"></i>
+    </div>
+    <div class="project-content">
+        <h3 class="project-title">Virtual Piano</h3>
+        <p class="project-description">
+            Interactive virtual piano with realistic sound effects and visual feedback. 
+            Features multiple octaves, key highlighting, and responsive design for desktop and mobile.
+        </p>
+        <div class="project-links">
+            <a href="https://mlriida09.github.io/-GlowPiano/" class="project-link link-demo" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+            <a href="https://github.com/MLRiida09/-GlowPiano?tab=readme-ov-file" class="project-link link-code">
+                <i class="fab fa-github"></i> Code
+            </a>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="skill-title">Frontend Development</h3>
+                    <ul class="skill-list">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Responsive Design</li>
+                        <li>CSS Animations</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="skill-title">Hardware & Systems</h3>
+                    <ul class="skill-list">
+                        <li>AVR Programming</li>
+                        <li>PCB Design</li>
+                        <li>MATLAB</li>
+                        <li>Circuit Analysis</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="skill-title">Data & Analytics</h3>
+                    <ul class="skill-list">
+                        <li>Data Analysis</li>
+                        <li>Excel Automation</li>
+                        <li>Report Generation</li>
+                        <li>Content Creation</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="skill-title">Leadership & Teaching</h3>
+                    <ul class="skill-list">
+                        <li>Team Leadership</li>
+                        <li>Programming Tutoring</li>
+                        <li>Client Management</li>
+                        <li>Project Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="profile-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Passionate Developer & Problem Solver</h3>
+                    <p>
+                        I'm a frontend developer and designer with a passion for creating 
+                        beautiful, functional web experiences. With expertise in both 
+                        hardware and software development, I bring a unique perspective 
+                        to every project.
+                    </p>
+                    <p>
+                        From programming AVR microcontrollers to building responsive web 
+                        applications, I love tackling challenging problems and learning 
+                        new technologies. I've led teams, taught programming to peers, 
+                        and worked with numerous clients to bring their ideas to life.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/MLRiida09" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mellal-rida-203989371" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/riida.riida.468490" class="social-link" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p>Ready to start your next project? Let's discuss how I can help bring your ideas to life.</p>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mellal Rida. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
